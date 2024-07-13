@@ -1,0 +1,25 @@
+database:
+  host: "localhost"
+  dbname: "yourdb"
+  port: "5432"
+  sslmode: "disable"
+  TimeZone: "Asia/Shanghai"
+
+redis:
+  addr: "localhost:6379"
+  db: 0
+  maxmemory: "3gb"
+  maxmemory_policy: "allkeys-lfu"
+  lazyfree_lazy_eviction: "yes"
+
+kafka:
+  incomingBrokers:
+    - "localhost:9092"
+  outgoingBrokers:
+    - "localhost:9092"
+  consumerGroup: "doc-updates-group"
+  incomingTopic: "doc-updates-incoming"
+  outgoingTopic: "doc-updates-outgoing"
+
+syncInterval: "5m"
+bufferSize: 1000
